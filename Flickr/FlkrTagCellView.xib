@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C97-Yi-cxh" customClass="FlkrTagCellView" customModule="Flickr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-36-nvB">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HaZ-36-nvB" secondAttribute="trailing" id="2w3-My-ku3"/>
+                <constraint firstAttribute="bottom" secondItem="HaZ-36-nvB" secondAttribute="bottom" id="FEQ-um-t3h"/>
+                <constraint firstItem="HaZ-36-nvB" firstAttribute="top" secondItem="C97-Yi-cxh" secondAttribute="top" id="tCU-si-XJ6"/>
+                <constraint firstItem="HaZ-36-nvB" firstAttribute="leading" secondItem="C97-Yi-cxh" secondAttribute="leading" id="vrb-kR-n9t"/>
+            </constraints>
+            <size key="customSize" width="281" height="21"/>
+            <connections>
+                <outlet property="tagLabel" destination="HaZ-36-nvB" id="we6-jw-RMK"/>
+            </connections>
+            <point key="canvasLocation" x="364.5" y="45.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
