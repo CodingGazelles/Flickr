@@ -18,6 +18,7 @@ class FlkrImageDetailViewController: UIViewController {
     // Outlet
     @IBOutlet weak var imageView: UIImageView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet weak var titleLabel: UILabel!
     
     
     // the image to display
@@ -27,20 +28,19 @@ class FlkrImageDetailViewController: UIViewController {
     
     /*
     */
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         NSLog("Awaked FlkrImageDetailViewController")
-    }
-    
-    
-    
-    /*
-     Set the state of activity monitor
-    */
-    override func viewWillAppear(animated: Bool) {
-        if image.image == nil && activityIndicator != nil {
-            activityIndicator!.startAnimating()
-        }
+        
+        
+        // Init UI
+        activityIndicator!.startAnimating()
+        titleLabel.text = image.title
+        
+        
+        // Loading image data
+        loadImageData()
+        
     }
     
     
@@ -50,7 +50,6 @@ class FlkrImageDetailViewController: UIViewController {
     */
     func setImage( image: FlkrImage) {
         self.image = image
-        loadImageData()
     }
     
     
@@ -61,30 +60,32 @@ class FlkrImageDetailViewController: UIViewController {
     private func loadImageData() {
         
         FlkrModel.defaultModel().loadImageData(image) { image in
-            NSLog("Executing callback of FlkrImageCellView loadImageData")
+            NSLog("Image data loaded, executing callback")
             
             
             // Return to Main Thread
             dispatch_async(dispatch_get_main_queue(), {
                 
                 
-                // set the image
-                self.image = image
-                if self.imageView != nil {
-                    self.imageView!.image = image.image!
-                } else {
+                // Just in case
+                if self.image == nil {
                     NSLog("ImageView not yet initialized. Unable to set Image.")
                 }
                 
-                
-                // stop the activity monitor
-                if self.activityIndicator != nil {
-                    self.activityIndicator!.stopAnimating()
-                    self.activityIndicator!.hidden = true
-                } else {
+                if self.activityIndicator == nil {
                     NSLog("Activity Indicator not yet initialized.")
                 }
                 
+                
+                // set the image
+                self.image = image
+                self.imageView!.image = image.image!
+
+                
+                // stop the activity monitor
+                self.activityIndicator!.stopAnimating()
+                self.activityIndicator!.hidden = true
+
                 
                 // reload the view
                 self.view.setNeedsLayout()

@@ -174,11 +174,11 @@
 				DF30AB711D94067300186916 /* MasterViewController.swift */,
 				DF85B9581D98712400BDF56D /* FlkrTagCollectionViewController.swift */,
 				DF95B2D41D99764D00009668 /* FlkrImageCollectionViewController.swift */,
+				DF3C2D141D99D07B00D0761F /* FlkrImageDetailViewController.swift */,
 				DF85B9601D98971D00BDF56D /* FlkrTagCellView.xib */,
 				DF85B9621D98988000BDF56D /* FlkrTagCellView.swift */,
 				DF95B2D61D99937800009668 /* FlkrImageCellView.xib */,
 				DF95B2D81D99939400009668 /* FlkrImageCellView.swift */,
-				DF3C2D141D99D07B00D0761F /* FlkrImageDetailViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";

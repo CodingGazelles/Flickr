@@ -15,7 +15,6 @@ import Foundation
 class FlkrModel {
     
     
-    
     // Singleton
     private init(){}
     private static let defaultInstance = FlkrModel()
@@ -35,14 +34,20 @@ class FlkrModel {
         let fullImage = FlkrCache.defaultCache().loadImageData(image)
         
         if fullImage != nil && fullImage?.data != nil {
+            
+            
+            NSLog("Found image data in cache: \(image.title)")
             callback(image: fullImage!)
+            
+            
         } else {
             
+            NSLog("Not found image data in cache loading from Flickr: \(image.title)")
             
             // if nothing in cache then fetch from Flickr
             // Call the web service
             FlkrWebServices.defaultServices().loadImageData(image) { image in
-                NSLog("Executing callback of FlkrModel loadImageData")
+                NSLog("Image downloaded from Flickr, executing callback: \(image.title)")
                 
                 
                 // Store in cache
@@ -67,10 +72,11 @@ class FlkrModel {
         
         // Call the web service and then executes the callback
         FlkrWebServices.defaultServices().loadTags { tags in
-            NSLog("Executing callback of FlkrModel listTags")
+            
+            NSLog("Loaded tag list, now executing callback")
             callback( tags: tags)
+            
         }
-        
         
     }
     
@@ -88,6 +94,7 @@ class FlkrModel {
         
         if imagesFromCache.count > 0 {
             
+            NSLog("Found in cache images with tag \(tag.label), now executing callback")
             
             // Return what's there
             callback( images: imagesFromCache)
@@ -98,7 +105,7 @@ class FlkrModel {
             // if nothing in cache then fetch from Flickr
             // Call the web service and then executes the callback
             FlkrWebServices.defaultServices().loadImagesWithTag( tag) { images in
-                NSLog("Executing callback of FLkrModel listImagesWithTag")
+                NSLog("Loaded list of image with tag '\(tag.label)' from Flickr, now executing callback")
                 
                 callback( images: images)
                 

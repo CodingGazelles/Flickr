@@ -105,7 +105,7 @@ class FlkrCache {
     /*
     */
     func storeImage( image: FlkrImage) {
-        NSLog("Loading Image from cache \(image.id)")
+        NSLog("Storing Image in cache \(image.id)")
         
         
         guard image.data != nil else {
@@ -144,7 +144,7 @@ class FlkrCache {
     /*
      */
     func loadImageData( image: FlkrImage) -> FlkrImage? {
-        NSLog("Loading Image from cache \(image.title)")
+        NSLog("Loading image data from cache \(image.title)")
         
         
         let fetch = NSFetchRequest(entityName: Entity.CachedImage.rawValue)
@@ -160,11 +160,7 @@ class FlkrCache {
             
         } catch {
             
-            let error = FlkrError.FailedLoadingFromCache(
-                message: "Failed to load image",
-                rootError: error)
-            
-            NSLog("\(error)")
+            NSLog("Failed to load image data from cache \(image.title)")
             
             return nil
             

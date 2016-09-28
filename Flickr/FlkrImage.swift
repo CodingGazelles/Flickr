@@ -30,5 +30,9 @@ struct FlkrImage {
         return self.data != nil ? UIImage(data: data!) : nil
     }
     
+    var hasData: Bool {
+        return data != nil
+    }
+    
 }
 

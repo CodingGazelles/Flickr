@@ -39,9 +39,8 @@ class FlkrImageCollectionViewController: UICollectionViewController {
     
     /*
      */
-    override func awakeFromNib() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
         NSLog("Awaked FlkrImageCollectionViewController")
         
         
@@ -88,7 +87,7 @@ class FlkrImageCollectionViewController: UICollectionViewController {
         
         if tag != nil {
             FlkrModel.defaultModel().listImagesWithTag(tag!) { imageList in
-                NSLog("Executing callback of FlkrImageCollectionViewController loadImages")
+                NSLog("Loaded images, now executing callback")
                 
                 
                 // return to Main Thread

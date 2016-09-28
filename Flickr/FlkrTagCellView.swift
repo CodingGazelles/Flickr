@@ -17,7 +17,7 @@ class FlkrTagCellView: UICollectionViewCell {
     @IBOutlet weak var tagLabel: UILabel!
     
     
-    
+    // Storyboard ID
     static let storyboardReuseID = "FlkrTagCellView"
     
 }

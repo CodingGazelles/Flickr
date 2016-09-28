@@ -35,8 +35,8 @@ class FlkrMasterViewController: UIViewController {
     
     /*
     */
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         NSLog("Awaked FlkrMasterViewController")
     }
     

@@ -47,7 +47,7 @@ class FlkrWebServices {
         
         // Listing hot tags
         case MethodListTags = "method=flickr.tags.getHotList"
-        case ArgPeriod = "period=week"
+        case ArgPeriod = "period=day"
         
         
         // Listing photos
@@ -80,10 +80,14 @@ class FlkrWebServices {
         NSLog("Loading image from Flickr \(image.title)")
         
         
-        assert( image.farm != nil && image.server != nil && image.id != nil && image.secret != nil, "Can't call this method witg empty Image")
+        assert( image.farm != nil && image.server != nil && image.id != nil && image.secret != nil, "Can't call this method with empty Image")
         
         
         let url = NSURL( string: String( format: Url.LoadImage.rawValue, image.farm!, image.server!, image.id!, image.secret!))
+        
+        NSLog("Calling url: \(url)")
+        
+        
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
             
             
@@ -130,6 +134,8 @@ class FlkrWebServices {
             "&" + Url.ArgFormatJson.rawValue,
             "&" + Url.MethodListTags.rawValue
         )
+        
+        NSLog("Calling url: \(url)")
         
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
@@ -184,6 +190,8 @@ class FlkrWebServices {
             "&" + Url.MethodListPhotosWithTag.rawValue,
             "&" + Url.ArgTags.rawValue + tag.label!
         )
+        
+        NSLog("Calling url: \(url)")
         
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in

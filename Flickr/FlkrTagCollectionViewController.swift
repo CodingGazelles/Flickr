@@ -32,9 +32,8 @@ class FlkrTagCollectionViewController: UICollectionViewController {
     
     /*
     */
-    override func awakeFromNib() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
         NSLog("Awaked FlkrTagCollectionViewController")
         
         //
@@ -73,7 +72,7 @@ class FlkrTagCollectionViewController: UICollectionViewController {
         
         // List hot tags
         FlkrModel.defaultModel().listTags { tags in
-            NSLog("Executing callback of FlkrTagCollectionViewController loadData")
+            NSLog("Loaded tags, now executing callback")
             
             
             // return to Main Thread
@@ -103,10 +102,10 @@ extension FlkrTagCollectionViewController {
     
     
     /*
-     2 lines in the collection
+     3 lines in the collection
      */
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     

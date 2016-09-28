@@ -48,8 +48,11 @@ class FlkrImageCellView: UICollectionViewCell {
      Reload the view
     */
     func setImage( image: FlkrImage) {
+        NSLog("Setting image \(image.title)")
+        
         
         self.image = image
+        
         
         if image.data != nil {
             
@@ -81,9 +84,11 @@ class FlkrImageCellView: UICollectionViewCell {
      Loads image data and reload the view
     */
     private func loadImageData() {
+        NSLog("Loading image data \(self.image.title)")
+        
         
         FlkrModel.defaultModel().loadImageData(image) { image in
-            NSLog("Executing callback of FlkrImageCellView loadImageData")
+            NSLog("Loaded image data \(self.image.title)")
             
             
             // Return to Main Thread
@@ -91,17 +96,7 @@ class FlkrImageCellView: UICollectionViewCell {
                 
                 
                 // set the image
-                self.image = image
-                self.imageView.image = image.image!
-                
-                
-                // stop the activity monitor
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.hidden = true
-                
-                
-                // reload the view
-                self.setNeedsLayout()
+                self.setImage(image)
                 
             })
             

@@ -91,6 +91,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="grW-vc-Zit">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cm0-JQ-Elm">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -130,32 +131,47 @@
                         <viewControllerLayoutGuide type="bottom" id="eeW-jU-kdF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lon-Dx-bUo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tOH-zc-Vlv">
-                                <rect key="frame" x="290" y="183" width="20" height="20"/>
+                                <rect key="frame" x="290" y="340" width="20" height="20"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kkx-ed-CvZ">
-                                <rect key="frame" x="0.0" y="-107" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kkx-ed-CvZ">
+                                <rect key="frame" x="0.0" y="50" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kkx-ed-CvZ" secondAttribute="height" multiplier="1:1" id="rnr-nv-G9h"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6i-9n-afU">
+                                <rect key="frame" x="20" y="658" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NPb-Q2-ip2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tOH-zc-Vlv" firstAttribute="centerX" secondItem="lon-Dx-bUo" secondAttribute="centerX" id="0nW-Y7-nbf"/>
+                            <constraint firstItem="o6i-9n-afU" firstAttribute="top" secondItem="kkx-ed-CvZ" secondAttribute="bottom" constant="8" id="135-2M-vju"/>
                             <constraint firstItem="kkx-ed-CvZ" firstAttribute="leading" secondItem="lon-Dx-bUo" secondAttribute="leading" id="BBS-hJ-IFG"/>
                             <constraint firstAttribute="trailing" secondItem="kkx-ed-CvZ" secondAttribute="trailing" id="BD5-VP-TEJ"/>
                             <constraint firstItem="tOH-zc-Vlv" firstAttribute="centerY" secondItem="lon-Dx-bUo" secondAttribute="centerY" id="OTV-Qp-lzX"/>
+                            <constraint firstItem="o6i-9n-afU" firstAttribute="leading" secondItem="lon-Dx-bUo" secondAttribute="leading" constant="20" id="VZL-x5-qbo"/>
                             <constraint firstItem="kkx-ed-CvZ" firstAttribute="centerX" secondItem="lon-Dx-bUo" secondAttribute="centerX" id="aeg-BC-Atj"/>
                             <constraint firstItem="kkx-ed-CvZ" firstAttribute="centerY" secondItem="lon-Dx-bUo" secondAttribute="centerY" id="hdK-dW-4Oa"/>
+                            <constraint firstAttribute="trailing" secondItem="o6i-9n-afU" secondAttribute="trailing" constant="20" id="puu-Ho-J9j"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="700"/>
                     <connections>
                         <outlet property="activityIndicator" destination="tOH-zc-Vlv" id="6gQ-lf-dEV"/>
                         <outlet property="imageView" destination="kkx-ed-CvZ" id="bCP-fx-cra"/>
+                        <outlet property="titleLabel" destination="o6i-9n-afU" id="dd8-SZ-qbz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4z-vX-fbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
