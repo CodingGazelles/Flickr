@@ -30,6 +30,7 @@
 		DF85B9611D98971D00BDF56D /* FlkrTagCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF85B9601D98971D00BDF56D /* FlkrTagCellView.xib */; };
 		DF85B9631D98988000BDF56D /* FlkrTagCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85B9621D98988000BDF56D /* FlkrTagCellView.swift */; };
 		DF85B9651D98CBAB00BDF56D /* FlkrTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85B9641D98CBAB00BDF56D /* FlkrTag.swift */; };
+		DF9507491D9B4BD100F069BB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF9507481D9B4BD100F069BB /* README.md */; };
 		DF95B2D51D99764D00009668 /* FlkrImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF95B2D41D99764D00009668 /* FlkrImageCollectionViewController.swift */; };
 		DF95B2D71D99937800009668 /* FlkrImageCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF95B2D61D99937800009668 /* FlkrImageCellView.xib */; };
 		DF95B2D91D99939400009668 /* FlkrImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF95B2D81D99939400009668 /* FlkrImageCellView.swift */; };
@@ -82,6 +83,7 @@
 		DF85B9601D98971D00BDF56D /* FlkrTagCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlkrTagCellView.xib; sourceTree = "<group>"; };
 		DF85B9621D98988000BDF56D /* FlkrTagCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlkrTagCellView.swift; sourceTree = "<group>"; };
 		DF85B9641D98CBAB00BDF56D /* FlkrTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlkrTag.swift; sourceTree = "<group>"; };
+		DF9507481D9B4BD100F069BB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF95B2D41D99764D00009668 /* FlkrImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlkrImageCollectionViewController.swift; sourceTree = "<group>"; };
 		DF95B2D61D99937800009668 /* FlkrImageCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlkrImageCellView.xib; sourceTree = "<group>"; };
 		DF95B2D81D99939400009668 /* FlkrImageCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlkrImageCellView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		DF30AB341D94048D00186916 = {
 			isa = PBXGroup;
 			children = (
+				DF9507481D9B4BD100F069BB /* README.md */,
 				DF30AB3F1D94048E00186916 /* Flickr */,
 				DF30AB541D94048E00186916 /* FlickrTests */,
 				DF30AB5F1D94048E00186916 /* FlickrUITests */,
@@ -380,6 +383,7 @@
 				DF3C2D151D99D07B00D0761F /* FlkrImageDetailViewController.swift in Sources */,
 				DF85B93B1D984EC700BDF56D /* FlkrCache.swift in Sources */,
 				DF85B9631D98988000BDF56D /* FlkrTagCellView.swift in Sources */,
+				DF9507491D9B4BD100F069BB /* README.md in Sources */,
 				DF85B9381D984A2200BDF56D /* FlkrWebServices.swift in Sources */,
 				DF30AB411D94048E00186916 /* AppDelegate.swift in Sources */,
 				DF85B9361D9849BD00BDF56D /* FlkrUrlStore.swift in Sources */,

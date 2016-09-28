@@ -13,7 +13,3 @@ FlickrImageViewer
 - Images are display in a collection
 - Clicking on a image displays it in a full screen
 
-
-# Remaining bugs
-- Sometimes in the full screen, the activity monitor stops without reason
-- Sometimes in the full view, the ImageView and the ActivityMonitorView are not setted yet
