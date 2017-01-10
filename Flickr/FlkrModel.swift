@@ -27,7 +27,7 @@ class FlkrModel {
     /*
     */
     func loadImageData( image: FlkrImage, callback: ( image: FlkrImage ) -> Void) {
-        NSLog("Loading image: \(image.title)")
+        NSLog("Loading image data: \(image.title)")
         
         
         // First fetch from cache

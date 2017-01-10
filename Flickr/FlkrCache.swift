@@ -127,7 +127,6 @@ class FlkrCache {
             try managedObjectContext.save()
             
             
-            
         } catch {
             let error = FlkrError.FailedSavingToCache(
                 message: "Failed to save image to cache",
